@@ -1,0 +1,31 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+// Custom Exception in java
+package com.mycompany.javap;
+
+/**
+ *
+ * @author 016pr
+ */
+// Prime Number
+public class Javap {
+
+    public static void main(String[] args) {
+        for(int i=2;i<20;i++){
+            int count=1;
+            for(int j=2;j<20;j++){
+                if(i%j==0 && i%1==0)
+                    count++;
+            }
+                if(count==2)
+            System.out.print(i+" ");   
+        }
+    }
+    
+    
+}
+/*
+   Output:-
+       2 3 5 7 11 13 17 19    
+*/
