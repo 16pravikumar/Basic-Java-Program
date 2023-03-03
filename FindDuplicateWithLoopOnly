@@ -1,0 +1,47 @@
+// Find the duplicate value only using loop
+package com.mycompany.javap;
+import java.util.*;
+import java.sql.*;
+public class Javap{
+    public static void main(String args[]){
+       int[] arr={1,2,11,12,1,3,9,9,2,3,2,7,1,1,1,1,11};
+       //int c=0;
+       int len=arr.length;
+       int[] dupl=new int[10];
+       int k=0;
+        for (int i = 0; i < len; i++) {
+            int c=0;
+            for (int j = 0; j < len; j++) {
+           
+                if(arr[j]==arr[i]){
+                    c++;
+                }
+                if(c>=2){
+                    boolean found=false;
+                    for(int x :dupl){
+                        if(arr[i]==x){
+                            found=true;
+                            break;
+                        }
+                    }
+                      if(found==false){
+                          try{
+                          dupl[k++]=arr[j];
+                          }catch(Exception e){
+                              e.printStackTrace();
+                          }
+                      }
+                    }
+                }
+            }
+        
+        for (int i : dupl) {
+            System.out.print(i+ " ");
+        }
+ 
+    }
+}
+  
+/* OutPut:-   
+   1 2 11 3 9 0 0 0 0 0 
+*/
