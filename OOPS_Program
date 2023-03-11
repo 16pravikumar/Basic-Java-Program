@@ -1,0 +1,66 @@
+package basic;
+/*
+ * Describe the oops concepts in coding with all the types with explanation
+ * Inheritance
+ * Polymorphism
+ * Abstraction
+ * Encapsulation
+ * class & object
+ * 
+*/
+ class oldjava{
+	 public void oldjdk(){
+		 System.out.println("Old JDK:  1.0");
+	 }
+	 public void latestVersion(int year) {
+		 System.out.println("India- JDK 20.0");
+	 }
+}
+ class newjava extends oldjava{
+	 public void newjdk(){
+		 System.out.println("new JDK:  21.0");
+	 }
+	 public void latestVersion(String str) {
+		 System.out.println("Europe -JDK 20.0");
+	 }
+}//Encapsulation- Means Javap connects through class,object and inheritance relationship
+public class javamain extends newjava implements Engine {
+
+	public static void main(String[] args) {
+		// Class & Object
+		javamain obj=new javamain();
+		// method used as property inherit using Inheritance
+		obj.oldjdk();
+		obj.newjdk();
+		//Polymorphism
+		obj.latestVersion(2023);
+		obj.latestVersion("USA");
+		//Abstraction
+		obj.run("Bike");
+		obj.run("Car");
+		obj.run("Bus");
+	}
+
+	public void run(String str) {
+		System.out.println(str+" has started");
+	}
+}
+
+package basic;
+
+public interface Engine {
+	public void run(String str);
+
+}
+
+
+
+/*Output:
+ * Old JDK:  1.0
+new JDK:  21.0
+India- JDK 20.0
+Europe -JDK 20.0
+Bikehas started
+Carhas started
+Bushas started
+*/
