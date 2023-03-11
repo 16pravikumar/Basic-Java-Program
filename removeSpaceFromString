@@ -1,0 +1,24 @@
+package basic;
+/* Write a program for remove the spaces in the given string below and give the count of the string variable
+ * input:-
+In this Sunday I must make more useful thing.
+*/
+public class javamain {
+
+	public static void main(String[] args) {
+		String str="In this Sunday I must make more useful thing.";
+		int strCount=0;
+		String removeSpaceStr[]=str.split(" ");
+		System.out.println("Total String count "+removeSpaceStr.length);
+		System.out.print("After Remove the Space : ");
+		for(String m:removeSpaceStr) {
+			System.out.print(m);
+		}
+		
+	}
+
+}
+/*Output:
+ * Total String count 9
+After Remove the Space : InthisSundayImustmakemoreusefulthing.
+*/
